@@ -1,5 +1,6 @@
 package classes;
 
+import javax.swing.*;
 import java.awt.*;
 
 public class ColoredRect extends DrawableRect {
@@ -17,9 +18,9 @@ public class ColoredRect extends DrawableRect {
         super(color, rect);
     }
     public void paint(Graphics g) {
-        g.setColor(outColor);
-        g.drawRect(10,10,rectangle.x2-rectangle.x1,rectangle.y2-rectangle.y1);
         g.setColor(inColor);
-        g.fillRect(11,11,rectangle.x2-rectangle.x1-2,rectangle.y2-rectangle.y1-2);
+        g.fillRect(rectangle.x1+10,rectangle.y1+10,rectangle.x2-rectangle.x1,rectangle.y2-rectangle.y1);
+        g.setColor(outColor);
+        g.drawRect(rectangle.x1+10,rectangle.y1+10,rectangle.x2-rectangle.x1,rectangle.y2-rectangle.y1);
     }
 }

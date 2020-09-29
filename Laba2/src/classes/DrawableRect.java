@@ -9,7 +9,7 @@ public class DrawableRect extends JPanel {
     public DrawableRect(Color color,Rectangle rect){
         outColor=color;
         rectangle=rect;
-        JFrame frame = new JFrame("DrawableRect");
+        JFrame frame = new JFrame();
         frame.getContentPane().add(this);
 
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -19,6 +19,6 @@ public class DrawableRect extends JPanel {
     }
     public void paint(Graphics g) {
         g.setColor(outColor);
-        g.drawRect(rectangle.x1+10,rectangle.y1+10,rectangle.x2-rectangle.x1,rectangle.y2-rectangle.y1);
+        g.drawRect(10,10,rectangle.x2-rectangle.x1,rectangle.y2-rectangle.y1);
     }
 }
